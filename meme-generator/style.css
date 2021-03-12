@@ -32,8 +32,6 @@ h1 {
     padding-top: 25px;
 }
 
-
-
 .content {
     display: flex;
     margin: auto;
@@ -110,12 +108,14 @@ textarea {
     margin: auto;
 }
 
-.monitor {
+.monitor,
+.chef-monitor {
     height: 60%;
     color: #5988ff;
     text-shadow: 0 0 0.625em #5988ff;
     font-family: "Lora", serif;
     font-weight: bold;
+    max-width: 650px;
 }
 
 .invert {
