@@ -115,7 +115,11 @@ textarea {
     text-shadow: 0 0 0.625em #5988ff;
     font-family: "Lora", serif;
     font-weight: bold;
-    max-width: 650px;
+}
+
+.chef-monitor {
+    padding-top: 28px;
+    max-width: 600px !important;
 }
 
 .invert {
