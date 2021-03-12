@@ -186,3 +186,21 @@ textarea {
         transform: rotate(360deg);
     }
 }
+
+footer {
+    /*position: absolute;
+    */
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: #222426;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+a {
+    color: #fff;
+    font-family: "Lora", "Courier New", monospace, serif;
+}
