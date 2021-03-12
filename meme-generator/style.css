@@ -43,7 +43,7 @@ h1 {
     display: flex;
     margin: auto;
     justify-content: center;
-    max-width: 500px;
+    max-width: 450px;
     text-align: center;
 }
 
@@ -139,7 +139,8 @@ svg stuff ?
 #boss {
     height: 48vh;
     margin: auto;
-    padding: 25px 0;
+    padding-top: 25px;
+    padding-bottom: 50px;
 }
 .boss {
     color: #edc314;
