@@ -18,7 +18,10 @@
         "San Francisco",
         "Seattle",
         "Yellowstone",
-        "Tokyo"
+        "Tokyo",
+        "Atlantis",
+        "Ohio",
+        "Core"
     ];
 
     var teamName = ["Breath Mints",
@@ -41,7 +44,10 @@
         "Tacos",
         "Tigers",
         "Wild Wings",
-        "Lift"
+        "Lift",
+        "Georgias",
+        "Worms",
+        "Mechanics"
     ];
 
     var colors = ["593037",
@@ -64,7 +70,10 @@
         "FFCE0A",
         "BF0043",
         "3EE652",
-        "E830AA"
+        "E830AA",
+        "00DBC2",
+        "5C4822",
+        "D13100"
     ];
 
     var emoji = [
@@ -88,5 +97,8 @@
         "🌮",
         "🐅",
         "🍗",
-        "🏋️‍♀️"
+        "🏋️‍♀️",
+        "🔱",
+        "🐌",
+        "🛠"
     ];
