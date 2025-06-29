@@ -16,6 +16,7 @@ Alexander
 Alexandria
 Aliciakeyes
 Alighieri
+Allan
 Allison
 Alston
 Alstott
@@ -378,6 +379,7 @@ Huber
 Huerta
 Hunter
 Igneus
+Incarnate
 Inez
 Ingram
 Inky
@@ -418,6 +420,7 @@ Johnson
 Jokes
 Jolene
 Jomgy
+Jon
 Jones
 Jordan
 Jorge
@@ -431,6 +434,7 @@ Junior Jr
 Justice
 Justin
 Kaj
+Kane
 Karato
 Karim
 Kathy
@@ -454,6 +458,7 @@ Kline
 Knight
 Koch
 Kofi
+Kranch
 Kravitz
 Kugel
 Kurt
@@ -462,6 +467,7 @@ Ladd
 Lady
 Lancaster
 Lance
+Lancelot
 Landry
 Lang
 Lars
@@ -604,8 +610,9 @@ Novak
 Nucleus
 Nyong'o
 Nyx
-Object
 O'Brian
+O'Lantern
+Object
 Obrien
 Oconnor
 Olive
@@ -715,6 +722,7 @@ Rush
 Ruslan
 Russo
 Rutledge
+Rylan
 Salih
 Sam
 Samothes
@@ -849,12 +857,14 @@ Tosser
 Tot
 Townsend
 Travis
+Trinity
 Tristin
 Triumphant
 Trololol
 Trombone
 Truk
 Tucker
+Tumblehome
 Turner
 Turnip
 Twelve
@@ -951,6 +961,7 @@ Zephyr
 Zesty
 Zhivago
 Zi
+Zippy
 Zimmerman
 Zion
 Ziwa
