@@ -60,9 +60,14 @@ async function buildTable() {
 
             if (y >= x) {
                 cell.style.backgroundColor = '#555';
+                // Impossible scores
             } else {
                 const entry = matrix[y][x];
                 cell.style.backgroundColor = entry && entry.count > 0 ? 'green' : 'white';
+                // Scorigami Achieved
+                
+                // Placeholder for cell text, which I probably won't use
+                // cell.textContent = `${x}/${y}`;
             }
 
             cell.addEventListener('click', (e) => {
