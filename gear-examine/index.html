@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Character Equipment Parser</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 4px;
+    }
+    th {
+      background: #ccc;
+    }
+    td {
+      vertical-align: top;
+      min-width: 120px;
+      text-align: center;
+    }
+    td:empty::after {
+      content: '';
+      display: block;
+      min-height: 1em;
+      background-color: #f9f9f9;
+    }
+    #player-name {
+      font-weight: bold;
+      background-color: #eef;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .player-break {
+      border-bottom: 3px solid black !important;
+    }
+  </style>
+</head>
+<body>
+  <textarea id="htmlInput" rows="10" cols="100" placeholder="Paste your HTML here"></textarea><br>
+  <button onclick="parseHTML()">Parse</button>
+  <div id="output"></div>
+
+  <script>
+    function parseHTML() {
+      const input = document.getElementById('htmlInput').value;
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(input, 'text/html');
+      const characters = doc.querySelectorAll('div.bg-\\[\\#1c2a3a\\]');
+      const slots = ['Head', 'Body', 'Hands', 'Feet', 'Accessory'];
+
+      let html = `<table><tr><th>Name</th>${slots.map(s => `<th>${s}</th>`).join('')}</tr>`;
+
+      characters.forEach(char => {
+        const name = char.querySelector('.font-semibold')?.textContent.trim() || 'Unknown';
+        const items = char.querySelectorAll('.relative.group');
+
+        const slotData = {};
+        slots.forEach(s => slotData[s] = { name: '', enchants: [] });
+
+        items.forEach(item => {
+          const slot = item.querySelector('.mt-1')?.textContent.trim();
+          const tooltip = item.querySelector('.group-hover\\:opacity-100')?.textContent.trim();
+          if (slots.includes(slot) && tooltip) {
+            const lines = tooltip.split('\n').map(line => line.trim()).filter(line => line);
+            slotData[slot].name = lines[0] || '';
+            slotData[slot].enchants = lines.slice(1, 5); // Max 4 enchantments
+          }
+        });
+
+        // Row 1: Player name + item names
+        html += `<tr><td id="player-name" class="player-break" rowspan="5">${name}</td>`;
+        html += slots.map(slot => `<td>${slotData[slot].name}</td>`).join('');
+        html += `</tr>`;
+
+        // Rows 2–5: Enchantments
+        for (let i = 0; i < 4; i++) {
+          const rowClass = (i === 3) ? ' class="player-break"' : '';
+          html += `<tr${rowClass}>`;
+          slots.forEach(slot => {
+            html += `<td>${slotData[slot].enchants[i] || ''}</td>`;
+          });
+          html += '</tr>';
+        }
+      });
+
+      html += '</table>';
+      document.getElementById('output').innerHTML = html;
+    }
+  </script>
+</body>
+</html>
